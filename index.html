@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">Header</header>
+    <nav class="nav">Nav</nav>
+    <article class="article">Article</article>
+    <aside class="ads">Ads</aside>
+    <footer class="footer">Footer</footer>
+  </div>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: white;
+    }
+    .container{
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "nav article ads "
+        ". footer footer";
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-rows: auto 1fr auto;
+      gap: 10px;
+      width: 80%;
+      max-width: 900px;
+      background: white;
+      padding: 10px;
+    }
+    header{
+      grid-area: header;
+      background: #f5a623;
+      padding: 20px;
+      text-align: center;
+    }
+    nav{
+      grid-area: nav;
+      background: pink;
+      padding: 20px;
+      text-align: center;
+      width: 100x;
+      height: 250px;
+    }
+    .article{
+      grid-area: article;
+      background: blueviolet;
+      padding: 20px;
+      text-align: center;
+      height: 200px;
+
+    }
+    .ads{
+      grid-area: ads;
+      background: orangered;
+      padding: 20px;
+      text-align: center;
+      height: 200px;
+    }
+    footer{
+      grid-area: footer;
+      background: green;
+      padding: 20px;
+      text-align: center;
+      width: 500px;
+    }
+  </style>
+</body>
+</html>
